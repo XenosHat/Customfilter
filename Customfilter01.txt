@@ -1,12 +1,23 @@
+! Apr 28, 2025 h ttps://m.youtube.com
 m.youtube.com##ytm-pivot-bar-item-renderer:nth-of-type(2)
 m.youtube.com##ytm-pivot-bar-item-renderer:nth-of-type(1)
 m.youtube.com##.comment-icon.ytProfileIconHost
+
+! May 12, 2025 https://m.facebook.com
 m.facebook.com##.bottom.fixed-container.m
+
+! May 16, 2025 https://test.selectionadda.in
 test.selectionadda.in###short-cut-panel div.ng-star-inserted
+
+! May 16, 2025 https://chatgpt.com
 chatgpt.com##.md\:px-\[60px\].text-xs.text-center.p-2.justify-center.items-center.w-full.min-h-8.flex.mt-auto.relative.text-token-text-secondary
+
+! May 19, 2025 https://www.reddit.com
 www.reddit.com##.xs\:py-0.xs\:px-2xs.my-2xs.py-2xs.px-md.xs\:rounded-\[16px\].hover\:bg-neutral-background-hover.focus-within\:bg-neutral-background-hover.bg-neutral-background.nd\:visible.relative.block.promotedlink
 www.reddit.com###main-content > .block.relative.promotedlink
 www.reddit.com###xpromo-bottom-sheet
 www.reddit.com##.my-2xs.py-2xs.px-md.xs\:rounded-\[16px\].hover\:bg-neutral-background-hover.focus-within\:bg-neutral-background-hover.bg-neutral-background.nd\:visible.relative.block.promotedlink
 www.reddit.com##shreddit-comment-tree-ad > .block.relative.promotedlink
+
+! May 22, 2025 https://m.youtube.com
 m.youtube.com##.ytp-unmute-shrink.ytp-unmute-animated.ytp-button.ytp-popup.ytp-unmute
