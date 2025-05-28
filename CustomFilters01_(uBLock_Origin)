@@ -1,0 +1,57 @@
+! 22 Dec 2024 https://gemini.google.com
+gemini.google.com##.disclaimer
+gemini.google.com##.single-mode-list
+gemini.google.com##hallucination-disclaimer.ng-star-inserted
+gemini.google.com##.ng-star-inserted.sources-list > .ng-star-inserted
+gemini.google.com##.ng-star-inserted.mat-mdc-button-base.mat-unthemed.ng-tns-c2431689757-0.mat-mdc-icon-button.mdc-icon-button.main-menu-button.mat-mdc-tooltip-trigger
+gemini.google.com##.ng-star-inserted.adv-upsell.buttons-container
+gemini.google.com##.desktop-ogb-buffer
+gemini.google.com##hallucination-disclaimer
+gemini.google.com##.overlay-main-content.ng-star-inserted.disable-onload-animations
+
+! 23 Dec 2024 https://chatgpt.com
+chatgpt.com##.max-md\:hidden.bg-token-main-surface-primary.font-semibold.h-header-height.z-10.justify-between.items-center.flex.mb-1\.5.p-3.top-0.sticky.no-draggable-children.draggable
+chatgpt.com##.md\:px-\[60px\].empty\:hidden.text-token-text-secondary.text-xs.text-center.py-2.px-2.w-full.relative
+chatgpt.com##.md\:items-center.shadow-xxs.lg\:mx-auto.dark\:bg-token-main-surface-secondary.dark\:border-transparent.\[text-wrap\:pretty\].text-token-text-primary.text-sm.pr-3.pl-5.py-4.bg-token-main-surface-primary.border-token-border-light.border.rounded-2xl.gap-4.items-start.w-full.flex
+chatgpt.com##.\[box-shadow\:var\(--sharp-edge-top-shadow\)\].max-md\:hidden.motion-safe\:transition-shadow.bg-token-main-surface-primary.font-semibold.h-header-height.z-10.justify-between.items-center.flex.p-3.top-0.sticky.no-draggable-children.draggable
+chatgpt.com##.\[box-shadow\:var\(--sharp-edge-top-shadow-placeholder\)\].max-md\:hidden.motion-safe\:transition-shadow.bg-token-main-surface-primary.font-semibold.h-header-height.z-10.justify-between.items-center.flex.p-3.top-0.sticky.no-draggable-children.draggable
+chatgpt.com##.md\:px-\[60px\].text-token-text-secondary.text-xs.text-center.p-2.justify-center.items-center.w-full.min-h-8.flex.mt-auto.relative
+chatgpt.com##.z-20.right-0.left-0.bottom-full.absolute
+chatgpt.com##.\@lg\/thread\:w-full.\@lg\/thread\:left-0.\@lg\/thread\:bottom-8.\@lg\/thread\:absolute
+
+! 28 Dec 2024 https://in.i.mi.com
+in.i.mi.com###folderList
+in.i.mi.com##.header-2EK0l
+
+! 5 Feb 2025 https://claude.ai
+claude.ai##.md\:pl-6.md\:pb-0\.5.md\:pt-1.pr-2.pl-11.gap-3.items-center.h-14.flex.-mb-6.z-10.top-0.sticky
+
+! 5 Feb 2025 https://copilot.microsoft.com
+copilot.microsoft.com##.pb-8.gap-3.items-end.flex-col.flex
+copilot.microsoft.com###NaJYhgpgTpEmU98HYAfXJ-content-0 > .pt-1.gap-2.flex-wrap.flex
+
+! 16 Mar 2025 https://www.youtube.com
+www.youtube.com##ytd-search-pyv-renderer.ytd-item-section-renderer.style-scope:nth-of-type(1) /* remove video search ad */
+www.youtube.com##.ytd-in-feed-ad-layout-renderer.style-scope > .ytd-promoted-video-renderer.style-scope /* remove video search ad */
+www.youtube.com##.ytwCompactLandscapeNoButtonLayoutViewModelHost /* remove video search ad */
+www.youtube.com##.ytp-chrome-top /* Remove the full screen upper line */
+www.youtube.com##.ytwSquareImageLayoutViewModelHost /* Remove the video player side list ads */
+www.youtube.com##.ytd-in-feed-ad-layout-renderer.style-scope > .ytd-text-image-no-button-layout-renderer.style-scope /* video search ad */
+www.youtube.com##.no-transition.ytd-comment-view-model.style-scope /*remove comments DP */
+
+! 28 Mar 2025 https://poki.com
+poki.com##.J91n1ymJasoch_FZq89b
+
+! 31 Mar 2025 https://www.reddit.com
+www.reddit.com##.block.relative.promotedlink /* Promotes */
+
+! 3 Apr 2025 https://testbook.com
+testbook.com##.super-banner /* remove a useless banner*/
+testbook.com##.section__free-tests /* Remove a recommendation of free test */
+||cdn.testbook.com/qb_resources/ssc-study-planner.webp$image
+
+! 17 May 2025 https://www.bing.com
+www.bing.com##.linkBtn.tooltip.id_button
+www.bing.com###id_mobile
+www.bing.com###b_phead_chat
+
