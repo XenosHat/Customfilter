@@ -1,7 +1,8 @@
-! Apr 28, 2025 h ttps://m.youtube.com
+! Apr 28, 2025 https://m.youtube.com
 m.youtube.com##ytm-pivot-bar-item-renderer:nth-of-type(2)
 m.youtube.com##ytm-pivot-bar-item-renderer:nth-of-type(1)
 m.youtube.com##.comment-icon.ytProfileIconHost
+m.youtube.com##.ytp-unmute-shrink.ytp-unmute-animated.ytp-button.ytp-popup.ytp-unmute
 
 ! May 12, 2025 https://m.facebook.com
 m.facebook.com##.bottom.fixed-container.m
@@ -18,6 +19,3 @@ www.reddit.com###main-content > .block.relative.promotedlink
 www.reddit.com###xpromo-bottom-sheet
 www.reddit.com##.my-2xs.py-2xs.px-md.xs\:rounded-\[16px\].hover\:bg-neutral-background-hover.focus-within\:bg-neutral-background-hover.bg-neutral-background.nd\:visible.relative.block.promotedlink
 www.reddit.com##shreddit-comment-tree-ad > .block.relative.promotedlink
-
-! May 22, 2025 https://m.youtube.com
-m.youtube.com##.ytp-unmute-shrink.ytp-unmute-animated.ytp-button.ytp-popup.ytp-unmute
