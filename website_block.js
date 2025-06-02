@@ -14,6 +14,7 @@
 // @match        *://*.yandex.net/*
 // @match        *://*.yandex.ru/*
 // @match        *://*.yandex.com/*
+// @match        *://*.startpage.com/*
 // @grant        none
 // ==/UserScript==
 
