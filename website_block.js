@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name          Website Blocker
+// @name         Cowards will disable it 💪🫵✊
 // @namespace    http://tampermonkey.net/
-// @version      2.0
-// @description  Blocks unwanted sites with centered bold "Access Denied" message. Uses regex whitelist.
+// @version      3.0
+// @description  Minimalist URL-based site blocker with whitelist support.
 // @author       Aman
 // @match        *://*.instagram.com/*
 // @match        *://*.mat6tube.com/*
@@ -18,95 +18,55 @@
 // @match        *://*.facebook.com/*
 // @grant        none
 // ==/UserScript==
-
 (function() {
-    'use strict';
+  'use strict';
 
-    const whitelist = {
-        "www.facebook.com": [
-            "^/@selectionadda/.*",
-            "^/photo$", // Exact match on string (string is not a path)
-            "^/photo/.*", // Exact match on path [as of my knowledge we use .* for path {capture everything after that complete path (/path/) } and $ at the end of string so that the string would exactly matches anywhere in the URL]
-            "^/selectionadda/.*" // We use ^ as a path starter eg.  ^/path01/
-        ]
-    };
+  const whitelist = {
+    "www.facebook.com": [
+      "^/@selectionadda/.*",
+      "^/photo$",
+      "^/photo/.*",
+      "^/selectionadda/.*"
+    ]
+  };
 
-    function isWhitelisted(host, path) {
-        const patterns = whitelist[host];
-        if (!patterns) return false;
-        return patterns.some(regexStr => new RegExp(regexStr).test(path));
+  const isWhitelisted = (host, path) =>
+    whitelist[host]?.some(p => new RegExp(p).test(path)) || false;
+
+  const showBlockScreen = () => {
+    document.body.innerHTML = `
+      <div style="
+        margin:0;padding:0;width:100vw;height:100vh;
+        background:black;color:white;font:bold 48px Arial;
+        display:flex;justify-content:center;align-items:center;
+        text-align:center;">Access Denied</div>`;
+    window.stop();
+  };
+
+  const blockIfNeeded = () => {
+    if (!isWhitelisted(location.hostname, location.pathname)) {
+      showBlockScreen();
     }
+  };
 
-    function showBlockScreen() {
-        document.open();
-        document.write(`
-            <!DOCTYPE html>
-            <html lang="en">
-            <head>
-                <meta charset="UTF-8">
-                <title>Access Denied</title>
-                <style>
-                    html, body {
-                        margin: 0;
-                        padding: 0;
-                        width: 100vw;
-                        height: 100vh;
-                        background-color: black;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
+  // Initial check
+  blockIfNeeded();
 
-                    .message {
-                        color: white;
-                        font-size: 48px;
-                        font-weight: bold;
-                        font-family: Arial, sans-serif;
-                        text-align: center;
-                    }
-
-                    @media (max-width: 1080px) {
-                        .message {
-                            font-size: 36px;
-                        }
-                    }
-
-                    @media (max-height: 800px) {
-                        .message {
-                            font-size: 32px;
-                        }
-                    }
-                </style>
-            </head>
-            <body>
-                <div class="message">Access Denied</div>
-            </body>
-            </html>
-        `);
-        document.close();
-        window.stop();
-    }
-
-    function blockIfNeeded() {
-        const host = window.location.hostname;
-        const path = window.location.pathname;
-        if (!isWhitelisted(host, path)) {
-            showBlockScreen();
-        }
-    }
-
-    blockIfNeeded();
-
-    const originalPushState = history.pushState;
-    const originalReplaceState = history.replaceState;
-
-    history.pushState = function (...args) {
-        originalPushState.apply(this, args);
-        blockIfNeeded();
+  // Patch pushState/replaceState
+  ['pushState', 'replaceState'].forEach(fn => {
+    const orig = history[fn];
+    history[fn] = function (...args) {
+      const result = orig.apply(this, args);
+      blockIfNeeded();
+      return result;
     };
-
-    history.replaceState = function (...args) {
-        originalReplaceState.apply(this, args);
-        blockIfNeeded();
-    };
+  });
+    // Fallback: check URL change every 5s
+  let last = location.href;
+  setInterval(() => {
+    if (location.href !== last) {
+      last = location.href;
+      blockIfNeeded();
+    }
+  }, 5000);
 })();
