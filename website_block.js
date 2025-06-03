@@ -25,9 +25,9 @@
   const whitelist = {
     "www.facebook.com": [
       "^/@selectionadda/.*",
-      "^/photo$",
-      "^/photo/.*",
-      "^/selectionadda/.*"
+      "^/photo$", // 😱According to Aman --- Exact match on string (string is not a path)
+      "^/photo/.*", // 😱According to Aman --- Exact match on path [as of my knowledge we use .* for path {capture everything after that complete path (/path/) } and $ at the end of string so that the string would exactly matches anywhere in the URL]
+      "^/selectionadda/.*" // 😱According to Aman --- We use ^ as a path starter eg.  ^/path01/
     ]
   };
 
@@ -58,7 +58,14 @@
     const orig = history[fn];
     history[fn] = function (...args) {
       const result = orig.apply(this, args);
-      blockIfNeeded();
+      blockIfNeeded(); // 😱According to Aman --- [Mutation Observer listener has two types the first one is <title> based and the second one is the whole html <body> based
+      // Since Histoty state[Monkey-Patch{Pushstate,Replacestate and Popstate}] listeners don't work in greasmonkey Script thats why there is only two approch to listen for the URL internal path change(Without reloading the Full page)
+      // The First method is URL Polling (A time Interval in which the Script checks for URL change and If the URL changes it executes the Script)
+      // The Second method is Mutation Observer wether <title> or <body> based since <body> based listner could be robust on system resources because of the continues changes in the HTML page.
+      // Whereas the <title> based could save some resurces sine tiles doesn't change much as <body>
+      // But the case it some site navigate throgh paths without changing its <title> so there is only two listeners left to Identify the URL change
+      // 1st is Mutation Observation <body> based (high Resources consumption on some sites)
+      // 2nd is URL Polling [it could be better if use less frequent. (that's why I used URL Polling in this Script)]
       return result;
     };
   });
