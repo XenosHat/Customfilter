@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Website Blocker
+// @name          Website Blocker
 // @namespace    http://tampermonkey.net/
 // @version      2.0
 // @description  Blocks unwanted sites with centered bold "Access Denied" message. Uses regex whitelist.
@@ -14,8 +14,8 @@
 // @match        *://*.yandex.net/*
 // @match        *://*.yandex.ru/*
 // @match        *://*.yandex.com/*
-// @match        *://*.startpage.com/*
 // @match        *://*.blocksite.co/*
+// @match        *://*.facebook.com/*
 // @grant        none
 // ==/UserScript==
 
@@ -23,7 +23,12 @@
     'use strict';
 
     const whitelist = {
-        "www.example.com": ["^/path01/.*", "^/path02/.*"]
+        "www.facebook.com": [
+            "^/@selectionadda/.*",
+            "^/photo$", // Exact match on string (string is not a path)
+            "^/photo/.*", // Exact match on path [as of my knowledge we use .* for path {capture everything after that complete path (/path/) } and $ at the end of string so that the string would exactly matches anywhere in the URL]
+            "^/selectionadda/.*" // We use ^ as a path starter eg.  ^/path01/
+        ]
     };
 
     function isWhitelisted(host, path) {
