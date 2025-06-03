@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Cowards will disable it 💪🫵✊
+// @name         Website Blocker
 // @namespace    http://tampermonkey.net/
 // @version      3.0
 // @description  Minimalist URL-based site blocker with whitelist support.
