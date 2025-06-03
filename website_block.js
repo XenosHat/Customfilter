@@ -16,6 +16,7 @@
 // @match        *://*.yandex.com/*
 // @match        *://*.blocksite.co/*
 // @match        *://*.facebook.com/*
+// @match        *://*.searx.space/*
 // @grant        none
 // ==/UserScript==
 (function() {
