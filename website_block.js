@@ -76,5 +76,5 @@
       last = location.href;
       blockIfNeeded();
     }
-  }, 5000);
+  }, 7000); // check every 7000ms
 })();
