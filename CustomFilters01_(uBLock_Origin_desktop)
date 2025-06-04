@@ -38,6 +38,7 @@ www.youtube.com##.ytp-chrome-top /* Remove the full screen upper line */
 www.youtube.com##.ytwSquareImageLayoutViewModelHost /* Remove the video player side list ads */
 www.youtube.com##.ytd-in-feed-ad-layout-renderer.style-scope > .ytd-text-image-no-button-layout-renderer.style-scope /* video search ad */
 www.youtube.com##.no-transition.ytd-comment-view-model.style-scope /*remove comments DP */
+www.youtube.com##.ytp-show-tiles.videowall-endscreen.ytp-player-content.html5-endscreen
 
 ! 28 Mar 2025 https://poki.com
 poki.com##.J91n1ymJasoch_FZq89b
@@ -54,4 +55,3 @@ testbook.com##.section__free-tests /* Remove a recommendation of free test */
 www.bing.com##.linkBtn.tooltip.id_button
 www.bing.com###id_mobile
 www.bing.com###b_phead_chat
-
