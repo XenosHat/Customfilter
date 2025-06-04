@@ -1,0 +1,59 @@
+In this text file I'm Aman is gonna to learn some code related things
+
+1- What is Monkey Patching? Used as Event Listeners.
+    Monkey patching means overriding a built-in function (like pushState) to add custom behavior when it’s called.
+    The Three Monkey-Patched Events You Need to Know -:
+    1st - history.pushState()	--- Changes URL without reload, 
+                                  Manual SPA navigation (like clicking a link),
+                                  Detect dynamic route changes
+    2nd - history.replaceState() --- Changes current URL (no new entry in history),	
+                                      SPA changes current view without adding back history,
+                                      Detect silent page updates
+    3rd - popstate event --- Built-in event,
+                            ❌ Can’t patch,
+                            (but can listen)	User clicks Back/Forward,
+                            React to browser navigation
+
+2- What is DOM (Document Object Model).
+    When you open a webpage (HTML), the browser creates a tree-like structure of all the elements — that structure is called the DOM.
+
+    <!DOCTYPE html>
+<html>
+  <head><title>My Page</title></head>
+  <body>
+    <h1>Hello Aman</h1>
+    <p>This is a paragraph.</p>
+  </body>
+</html>
+                                    Turns into a DOM tree like:
+                                            Document
+                                             └── html
+                                                   ├── head
+                                                   │    └── title
+                                                   └── body
+                                                          ├── h1      // Heading
+                                                          └── p      // p is paragrah
+3- What is MutationObserver then?
+  The MutationObserver is a watchdog 🔎 that you can attach to the DOM. It observes and reports any changes made to the DOM.
+    
+    -- The DOM is the structure
+    -- MutationObserver is a listener/watcher that detects structural changes in the DOM.
+
+
+4- Hey does URL is the part of DOM?
+    No — the URL is not part of the DOM, but it’s closely connected.
+
+          -- When URL changes, it often triggers DOM updates.
+          -- But the URL lives in the browser’s address bar, not the DOM tree.
+
+
+
+My Previous Knowledge --
+     // 😱According to Aman --- [Mutation Observer listener has two types the first one is <title> based and the second one is the whole html <body> based
+      // Since Histoty state[Monkey-Patch{Pushstate,Replacestate and Popstate}] listeners don't work in greasmonkey Script(Due to hard sandboxing) thats why there is only two approch to listen for the URL internal path change(Without reloading the Full page) also know SPA and Dynamic URL Update
+      // The First method is URL Polling (A time Interval in which the Script checks for URL change and If the URL changes it executes the Script)
+      // The Second method is Mutation Observer wether <title> or <body> based since <body> based listner could be robust on system resources because of the continues changes in the HTML page.
+      // Whereas the <title> based could save some resurces sine tiles doesn't change much as <body>
+      // But the case it some site navigate throgh its URL paths without changing its <title> so there is only two listeners left to Identify the URL change
+      // 1st is Mutation Observation <body> based (high Resources consumption on some sites)
+      // 2nd is URL Polling [it could be better if use less frequent. (that's why I used URL Polling in this Script)]
