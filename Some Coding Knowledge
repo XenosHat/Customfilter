@@ -57,3 +57,15 @@ My Previous Knowledge --
       // But the case it some site navigate throgh its URL paths without changing its <title> so there is only two listeners left to Identify the URL change
       // 1st is Mutation Observation <body> based (high Resources consumption on some sites)
       // 2nd is URL Polling [it could be better if use less frequent.]
+
+5- What is Sandboxing in Greasemonkey and Tampermonkey?
+        Sandboxing means that your userscript runs in a separate environment from the main website's JavaScript. Think of it like putting your script inside a safety box — it can see the webpage, but the page can’t easily see or interfere with it.
+                unsafeWindow: The Escape Hatch
+                    If you want your script to interact directly with the page’s JavaScript, use:
+                    unsafeWindow.somePageFunction();
+But beware:
+It breaks the sandbox, so it exposes your script to the page’s JS.
+It’s sometimes blocked or limited, especially in Greasemonkey v4+ due to security.
+Execution timing matters — your patch must run before the site uses the method. That’s why @run-at document-start is important
+
+
