@@ -62,10 +62,22 @@ My Previous Knowledge --
         Sandboxing means that your userscript runs in a separate environment from the main website's JavaScript. Think of it like putting your script inside a safety box — it can see the webpage, but the page can’t easily see or interfere with it.
                 unsafeWindow: The Escape Hatch
                     If you want your script to interact directly with the page’s JavaScript, use:
-                    unsafeWindow.somePageFunction();
+                    const win = unsafeWindow;  // Now wherever the win. function is used that function will be partialy sandboxed
+
+        Example 01 ---   You can also use --
+                      // @grant        unsafeWindow
+                      // @run-at       document-start
+                                                     --- combine these with <script> tag to truly sandbox your java script.  // <script> is being taught below this
+
 But beware:
 It breaks the sandbox, so it exposes your script to the page’s JS.
 It’s sometimes blocked or limited, especially in Greasemonkey v4+ due to security.
 Execution timing matters — your patch must run before the site uses the method. That’s why @run-at document-start is important
 
+6- Unsafewindows is method of partialy escaping sandboxing BUT
+        Here Dad comes into play
+        --- injecting a <script> tag for truly escaping the userscript sandbox
 
+         Example --    document.createElement('script');  // This is the starter of <script> tag
+                       script.textContent =   // This is used to describe what code is goona to bypass the sandboxing
+                       documentElement.appendChild(script);   // End of <script> tag // This is the moment the sandbox is truly bypassed
