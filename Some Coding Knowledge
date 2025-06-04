@@ -56,4 +56,4 @@ My Previous Knowledge --
       // Whereas the <title> based could save some resurces sine tiles doesn't change much as <body>
       // But the case it some site navigate throgh its URL paths without changing its <title> so there is only two listeners left to Identify the URL change
       // 1st is Mutation Observation <body> based (high Resources consumption on some sites)
-      // 2nd is URL Polling [it could be better if use less frequent. (that's why I used URL Polling in this Script)]
+      // 2nd is URL Polling [it could be better if use less frequent.]
