@@ -18,6 +18,7 @@
 // @match        *://*.facebook.com/*
 // @match        *://*.searx.space/*
 // @match        *://*.spankbang.com/*
+// @match        *://*.you-porn.com/*
 // @grant        none
 // ==/UserScript==
 (function() {
