@@ -19,6 +19,7 @@
 // @match        *://*.searx.space/*
 // @match        *://*.spankbang.com/*
 // @match        *://*.you-porn.com/*
+// @match        *://*.naughtyamerica.com/*
 // @grant        none
 // ==/UserScript==
 (function() {
